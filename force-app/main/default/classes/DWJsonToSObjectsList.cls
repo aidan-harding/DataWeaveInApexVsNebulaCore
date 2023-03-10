@@ -48,10 +48,14 @@ public with sharing class DWJsonToSObjectsList {
         Map<String, Object> parameters = new Map<String, Object>();
         parameters.put('mapping', keyMap);
         parameters.put('incomingJson', incomingJson);
+        Timer timer = new Timer();
         Dataweave.Script script = Dataweave.Script.createScript(
             'json2sObjects'
         );
+        timer.stopAndLog('Created Script in {0}');
+        timer.start();
         DataWeave.Result result = script.execute(parameters);
+        timer.stopAndLog('Ran Script in {0}');
         return result.getValueAsString();
     }
 
