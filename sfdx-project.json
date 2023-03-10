@@ -8,5 +8,9 @@
   "name": "DataWeaveInApex",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "53.0"
+  "sourceApiVersion": "53.0",
+  "packageAliases": {
+    "Nebula Core": "04t6M000000gaxSQAQ",
+    "Nebula Object Transformer": "04t6M000000gaunQAA"
+  }
 }
